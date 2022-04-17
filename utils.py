@@ -29,7 +29,7 @@ def get_candidates_by_skill(skill_name):
     data = load_candidates()
     data_for_skill = []
     for i in data:
-        if skill_name.lower() in i['skills'].lower():
+        if skill_name.lower() in i['skills'].lower().split(','):
             data_for_skill.append(i)
 
     return data_for_skill
